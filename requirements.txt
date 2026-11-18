@@ -1,0 +1,5 @@
+nornir>=3.4
+nornir-utils
+nornir-netmiko
+netmiko>=4.3
+jinja2

@@ -1,0 +1,21 @@
+# Containerlab adds these names to /etc/hosts. On a real network, put real
+# management IPs/hostnames here instead - nothing else needs to change.
+spine1:
+  hostname: clab-netlab-spine1
+  groups: [srl]
+  data:
+    interfaces:
+      - {name: ethernet-1/1, ip: 10.0.0.0/31, peer: 10.0.0.1}
+      - {name: ethernet-1/2, ip: 10.0.0.2/31, peer: 10.0.0.3}
+leaf1:
+  hostname: clab-netlab-leaf1
+  groups: [srl]
+  data:
+    interfaces:
+      - {name: ethernet-1/1, ip: 10.0.0.1/31, peer: 10.0.0.0}
+leaf2:
+  hostname: clab-netlab-leaf2
+  groups: [srl]
+  data:
+    interfaces:
+      - {name: ethernet-1/1, ip: 10.0.0.3/31, peer: 10.0.0.2}

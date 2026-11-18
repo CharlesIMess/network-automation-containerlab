@@ -1,0 +1,6 @@
+{% for intf in interfaces %}
+set / interface {{ intf.name }} admin-state enable
+set / interface {{ intf.name }} subinterface 0 ipv4 admin-state enable
+set / interface {{ intf.name }} subinterface 0 ipv4 address {{ intf.ip }}
+set / network-instance default interface {{ intf.name }}.0
+{% endfor %}

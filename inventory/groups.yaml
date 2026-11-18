@@ -1,0 +1,4 @@
+srl:
+  platform: nokia_srl        # Netmiko device_type; also selects the template
+  username: admin
+  password: NokiaSrl1!       # SR Linux lab default - use a vault/env vars for real gear
